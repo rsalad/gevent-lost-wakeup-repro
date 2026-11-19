@@ -170,7 +170,7 @@ The same boot was rerun on a pure-Python copy of gevent 26.9.0 with and without 
 
 ## Upstream status
 
-Not reported and not fixed, as of 2026-11-18.
+Reported as [gevent#2221](https://github.com/gevent/gevent/issues/2221) on 2026-11-18. Not fixed in any release as of that date.
 
 - [#2013](https://github.com/gevent/gevent/issues/2013) is the same symptom with a simpler trigger. [#2199](https://github.com/gevent/gevent/pull/2199) closed it in 26.8.0 by fixing the foreign release while `hub` is still set. It did not touch `_semaphore.py`, and its test has the native thread acquire and release once.
 - 26.9.0 is the newest release on PyPI. `master` is one version-bump commit ahead of the tag.
