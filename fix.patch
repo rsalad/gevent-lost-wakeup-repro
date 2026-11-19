@@ -1,0 +1,10 @@
+--- a/src/gevent/_semaphore.py
++++ b/src/gevent/_semaphore.py
+@@ -502,6 +502,6 @@ class BoundedSemaphore(Semaphore):
+         # When we are absolutely certain that no one holds this semaphore,
+         # release our hub and go back to floating. This assists in cross-thread
+         # uses.
+-        if counter == self._initial_value:
++        if counter == self._initial_value and not self._links:
+             self.hub = None # pylint:disable=attribute-defined-outside-init
+         return counter

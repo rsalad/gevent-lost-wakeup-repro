@@ -1,0 +1,4 @@
+gevent==26.9.0
+greenlet==3.3.1
+zope.event==6.1
+zope.interface==8.2
